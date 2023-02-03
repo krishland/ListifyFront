@@ -1,12 +1,17 @@
-<app-column>
-  <app-card *ngFor="let task of collection">
-    <div class="card-body">
-      <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
-      <h5 class="card-title">{{task.title}}</h5>
-      <p class="card-text">{{task.content}}</p>
-      <select (change)="changeState(task, $event)">
-        <option *ngFor="let state of states" [selected]="state === task.state">{{state}}</option>
-      </select>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let state of states">
+      <h5>{{state}}</h5>
+      <app-card *ngFor="let task of collection">
+        <div class="card-body">
+          <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
+          <h5 class="card-title">{{task.title}}</h5>
+          <p class="card-text">{{task.content}}</p>
+          <select (change)="changeState(task, $event)">
+            <option *ngFor="let state of states" [selected]="state === task.state">{{state}}</option>
+          </select>
+        </div>
+      </app-card>
     </div>
-  </app-card>
-</app-column>
+  </div>
+</div>

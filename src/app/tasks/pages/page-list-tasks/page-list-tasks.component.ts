@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { State } from 'src/app/core/enums/state';
 import { Task } from 'src/app/core/models/task';
@@ -14,6 +14,8 @@ export class PageListTasksComponent implements OnInit {
   public collection!: Task[];
 
   public states = Object.values(State);
+
+  @Input() state: State[] = Object.values(State);
 
   public newObj = new Task();
   constructor(private tasksService: TasksService, private router: Router) {

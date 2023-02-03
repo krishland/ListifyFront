@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Task } from 'src/app/core/models/task';
 import { State } from 'src/app/core/enums/state';
@@ -19,7 +19,7 @@ export class TasksService {
   }
 
   public refreshCollection() {
-    this.http.get<Task[]>(`${this.url}/tasks`).subscribe(data => {
+    this.http.get<Task[]>(`${this.url}/tasks?state=En cours`).subscribe(data => {
       this.collection$.next(data);
     })
   }
@@ -30,7 +30,11 @@ export class TasksService {
   }
 
   public update(obj: Task): Observable<Task>{
-    return this.http.put<Task>(`${this.url}/tasks/${obj.id}`, obj)
+    return this.http.put<Task>(`${this.url}/tasks/${obj.id}`, obj).pipe(
+      tap(() => {
+        this.refreshCollection();
+      })
+    )
   }
 
   public changeState(task: Task, state: State): Observable<Task>{
