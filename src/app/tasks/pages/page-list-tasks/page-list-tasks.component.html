@@ -1,8 +1,50 @@
 <div class="container">
   <div class="row">
-    <div class="col" *ngFor="let state of states">
-      <h5>{{state}}</h5>
-      <app-card *ngFor="let task of collection">
+    <div class="col">
+      <h5>À faire</h5>
+      <app-card *ngFor="let task of collectionToDo">
+        <div class="card-body">
+          <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
+          <h5 class="card-title">{{task.title}}</h5>
+          <p class="card-text">{{task.content}}</p>
+          <select (change)="changeState(task, $event)">
+            <option *ngFor="let state of states" [selected]="state === task.state">{{state}}</option>
+          </select>
+        </div>
+      </app-card>
+    </div>
+
+    <div class="col">
+      <h5>En cours</h5>
+      <app-card *ngFor="let task of collectionInProgress">
+        <div class="card-body">
+          <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
+          <h5 class="card-title">{{task.title}}</h5>
+          <p class="card-text">{{task.content}}</p>
+          <select (change)="changeState(task, $event)">
+            <option *ngFor="let state of states" [selected]="state === task.state">{{state}}</option>
+          </select>
+        </div>
+      </app-card>
+    </div>
+
+    <div class="col">
+      <h5>Bloqué</h5>
+      <app-card *ngFor="let task of collectionBlocked">
+        <div class="card-body">
+          <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
+          <h5 class="card-title">{{task.title}}</h5>
+          <p class="card-text">{{task.content}}</p>
+          <select (change)="changeState(task, $event)">
+            <option *ngFor="let state of states" [selected]="state === task.state">{{state}}</option>
+          </select>
+        </div>
+      </app-card>
+    </div>
+
+    <div class="col">
+      <h5>Terminé</h5>
+      <app-card *ngFor="let task of collectionDone">
         <div class="card-body">
           <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
           <h5 class="card-title">{{task.title}}</h5>

@@ -19,7 +19,7 @@ export class TasksService {
   }
 
   public refreshCollection() {
-    this.http.get<Task[]>(`${this.url}/tasks?state=En cours`).subscribe(data => {
+    this.http.get<Task[]>(`${this.url}/tasks`).subscribe(data => {
       this.collection$.next(data);
     })
   }
