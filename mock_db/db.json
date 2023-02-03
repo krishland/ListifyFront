@@ -1,10 +1,16 @@
 {
   "tasks": [
     {
-      "title": "Test",
-      "content": "iugsiu",
-      "state": "DONE",
+      "state": "À faire",
+      "title": "Titre de notre 1ère tâche",
+      "content": "Contenu de notre 1ère tâche",
       "id": 1
+    },
+    {
+      "state": "Bloqué",
+      "title": "Titre de notre 2ème tâche",
+      "content": "Contenu de notre 2ème tâche",
+      "id": 2
     }
   ]
 }
