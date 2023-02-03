@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { State } from 'src/app/core/enums/state';
 import { Task } from 'src/app/core/models/task';
 import { TasksService } from '../../services/tasks.service';
@@ -15,7 +16,7 @@ export class PageListTasksComponent implements OnInit {
   public states = Object.values(State);
 
   public newObj = new Task();
-  constructor(private tasksService: TasksService) {
+  constructor(private tasksService: TasksService, private router: Router) {
     //console.log(this.newObj)
     this.tasksService.collection.subscribe(data => {
       this.collection = data;
@@ -34,4 +35,7 @@ export class PageListTasksComponent implements OnInit {
     })
   }
 
+  public goToEdit(task: Task){
+    this.router.navigate(["edit", task.id])
+  }
 }

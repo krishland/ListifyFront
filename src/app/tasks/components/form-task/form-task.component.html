@@ -1,1 +1,26 @@
-<p>form-task works!</p>
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">Titre</label>
+    <input type="text" id="title" class="form-control" placeholder="Titre..." formControlName="title">
+  </div>
+  <div *ngIf="taskForm.controls['title'].errors?.['minlength']">
+    Doit contenir au moins 3 caractères.
+  </div>
+
+  <div class="form-group">
+    <label for="content">Description</label>
+    <textarea id="content" class="form-control" placeholder="Description..." formControlName="content"></textarea>
+  </div>
+  <div *ngIf="taskForm.controls['content'].errors?.['minlength']">
+    Doit contenir au moins 3 caractères.
+  </div>
+
+  <div class="form-group">
+    <label for="states">État</label>
+    <select id="states" class="form-control" placeholder="Description..." formControlName="state">
+      <option [value]="state" *ngFor="let state of states">{{state}}</option>
+    </select>
+  </div>
+
+  <app-btn type="submit" [disabled]="taskForm.invalid" label="Valider"></app-btn>
+</form>

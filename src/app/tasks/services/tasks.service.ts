@@ -38,4 +38,12 @@ export class TasksService {
     obj.state = state;
     return this.update(obj)
   }
+
+  public add(obj: Task): Observable<Task> {
+    return this.http.post<Task>(`${this.url}/tasks`, obj)
+  }
+
+  public getElementById(id: Number): Observable<Task> {
+    return this.http.get<Task>(`${this.url}/tasks/${id}`)
+  }
 }

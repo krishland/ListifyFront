@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Task } from 'src/app/core/models/task';
+import { TasksService } from '../../services/tasks.service';
 
 @Component({
   selector: 'app-page-add-task',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageAddTaskComponent implements OnInit {
 
-  constructor() { }
+  public item: Task = new Task();
+
+  constructor(private tasksService: TasksService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  public onAdd(obj: Task) {
+    this.tasksService.add(obj).subscribe(() => {
+      this.router.navigate([""])
+    })
+  }
 }
