@@ -1,1 +1,19 @@
-<p>page-list-tasks works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let state of states">
+      <h5>{{state}}</h5>
+      <div *ngFor="let task of collection">
+        <app-card *ngIf="state === task.state">
+          <div class="card-body">
+            <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
+            <h5 class="card-title">{{task.title}}</h5>
+            <p class="card-text">{{task.content}}</p>
+            <select (change)="changeState(task, $event)" appState [etat]="task.state">
+              <option *ngFor="let state of states" [selected]="state === task.state">{{state}}</option>
+            </select>
+          </div>
+        </app-card>
+      </div>
+    </div>
+  </div>
+</div>
