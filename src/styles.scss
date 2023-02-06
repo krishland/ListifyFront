@@ -4,4 +4,15 @@
 @import "./stylings/theme";
 
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    163deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 36%,
+    rgba(96, 188, 240, 1) 91%
+  );
+}

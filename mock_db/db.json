@@ -1,21 +1,21 @@
 {
   "tasks": [
     {
-      "state": "À faire",
+      "state": "En cours",
       "title": "Titre de notre 1ère tâche",
       "content": "Contenu de notre 1ère tâche",
       "id": 1
     },
     {
+      "state": "En cours",
       "title": "Titre de notre 2ème tâche",
       "content": "Contenu de notre 2ème tâche",
-      "state": "À faire",
       "id": 2
     },
     {
+      "state": "Bloqué",
       "title": "Ejoiersghois",
       "content": "Petit contenu",
-      "state": "Bloqué",
       "id": 3
     },
     {
@@ -29,6 +29,24 @@
       "title": "Super Test",
       "content": "Vrai contenu",
       "id": 5
+    },
+    {
+      "title": "fzefaz",
+      "content": "gzegzeg",
+      "state": "À faire",
+      "id": 6
+    },
+    {
+      "title": "gzeg",
+      "content": "gezgzegezgz",
+      "state": "Bloqué",
+      "id": 7
+    },
+    {
+      "title": "gezgze",
+      "content": "gzegzegez",
+      "state": "Terminé",
+      "id": 8
     }
   ]
 }

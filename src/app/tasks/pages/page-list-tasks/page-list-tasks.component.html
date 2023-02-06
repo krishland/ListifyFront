@@ -1,16 +1,32 @@
-<div class="container">
+<div class="container container-columns">
   <div class="row">
-    <div class="col" *ngFor="let state of states">
-      <h5>{{state}}</h5>
+    <div class="col column" *ngFor="let state of states">
+      <h5>{{ state }}</h5>
+      <div *ngIf="">coucou</div>
       <div *ngFor="let task of collection">
-        <app-card *ngIf="state === task.state">
+        <app-card *ngIf="state === task.state" class="cards-container">
           <div class="card-body">
-            <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
-            <h5 class="card-title">{{task.title}}</h5>
-            <p class="card-text">{{task.content}}</p>
-            <select (change)="changeState(task, $event)" appState [etat]="task.state">
-              <option *ngFor="let state of states" [selected]="state === task.state">{{state}}</option>
-            </select>
+            <div class="top-card">
+              <h5 class="card-title">{{ task.title }}</h5>
+              <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
+            </div>
+
+            <p class="card-text">{{ task.content }}</p>
+            <div class="select-state">
+              <app-icon-chevron-down></app-icon-chevron-down>
+              <select
+                (change)="changeState(task, $event)"
+                appState
+                [etat]="task.state"
+              >
+                <option
+                  *ngFor="let state of states"
+                  [selected]="state === task.state"
+                >
+                  {{ state }}
+                </option>
+              </select>
+            </div>
           </div>
         </app-card>
       </div>

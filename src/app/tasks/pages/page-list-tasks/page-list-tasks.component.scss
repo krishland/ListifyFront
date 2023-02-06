@@ -1,13 +1,68 @@
 //classes pour changement des states
-.state-àfaire{
+.state-àfaire {
   color: var(--app-todo);
 }
-.state-encours{
+.state-encours {
   color: var(--app-inprogress);
 }
-.state-bloqué{
+.state-bloqué {
   color: var(--app-blocked);
 }
-.state-terminé{
+.state-terminé {
   color: var(--app-done);
+}
+
+.column {
+  margin: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--app-darklight);
+  // min-height: 85vh;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.top-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body {
+  padding: 20px;
+  min-height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card-title {
+  font-size: 19px;
+  // text-decoration: underline;
+  max-width: 180px;
+}
+
+.card-text {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.select-state {
+  // border: red solid 1px;
+  display: flex;
+  gap: 10px;
+}
+
+select {
+  border: none;
+  appearance: none;
+  /* for Safari, Chrome, Opera */
+  -webkit-appearance: none;
+  outline: none;
 }
