@@ -1,0 +1,13 @@
+//classes pour changement des states
+.state-àfaire{
+  color: var(--app-todo);
+}
+.state-encours{
+  color: var(--app-inprogress);
+}
+.state-bloqué{
+  color: var(--app-blocked);
+}
+.state-terminé{
+  color: var(--app-done);
+}

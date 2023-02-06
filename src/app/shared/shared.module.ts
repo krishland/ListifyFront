@@ -4,6 +4,7 @@ import { BtnComponent } from './components/btn/btn.component';
 import { CardComponent } from './components/card/card.component';
 import { ColumnComponent } from './components/column/column.component';
 import { RouterModule } from '@angular/router';
+import { StateDirective } from './directives/state.directive';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     BtnComponent,
     CardComponent,
-    ColumnComponent
+    ColumnComponent,
+    StateDirective,
   ],
   imports: [
     CommonModule, RouterModule
@@ -19,7 +21,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     BtnComponent,
     CardComponent,
-    ColumnComponent
+    ColumnComponent,
+    StateDirective
   ]
 })
 export class SharedModule { }
