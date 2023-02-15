@@ -35,7 +35,11 @@ export class PageListTasksComponent implements OnInit {
     this.router.navigate(['edit', task.id]);
   }
 
+  public onDelete(id: number) {
+    this.tasksService.delete(id).subscribe(() => {});
+  }
+
   public hasTasks(state: string) {
-    return this.collection.filter(task => task.state === state).length === 0;
+    return this.collection.filter((task) => task.state === state).length === 0;
   }
 }

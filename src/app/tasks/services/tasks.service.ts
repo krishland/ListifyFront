@@ -6,11 +6,12 @@ import { Task } from 'src/app/core/models/task';
 import { State } from 'src/app/core/enums/state';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TasksService {
-
-  private collection$: BehaviorSubject<Task[]> = new BehaviorSubject<Task[]>([]);
+  private collection$: BehaviorSubject<Task[]> = new BehaviorSubject<Task[]>(
+    []
+  );
 
   private url = environment.urlApi;
 
@@ -19,35 +20,43 @@ export class TasksService {
   }
 
   public refreshCollection() {
-    this.http.get<Task[]>(`${this.url}/tasks`).subscribe(data => {
+    this.http.get<Task[]>(`${this.url}/tasks`).subscribe((data) => {
       this.collection$.next(data);
-    })
+    });
   }
 
-  public get collection(): Observable<Task[]>{
+  public get collection(): Observable<Task[]> {
     this.refreshCollection();
     return this.collection$;
   }
 
-  public update(obj: Task): Observable<Task>{
+  public update(obj: Task): Observable<Task> {
     return this.http.put<Task>(`${this.url}/tasks/${obj.id}`, obj).pipe(
       tap(() => {
         this.refreshCollection();
       })
-    )
+    );
   }
 
-  public changeState(task: Task, state: State): Observable<Task>{
+  public changeState(task: Task, state: State): Observable<Task> {
     const obj = new Task(task);
     obj.state = state;
-    return this.update(obj)
+    return this.update(obj);
   }
 
   public add(obj: Task): Observable<Task> {
-    return this.http.post<Task>(`${this.url}/tasks`, obj)
+    return this.http.post<Task>(`${this.url}/tasks`, obj);
+  }
+
+  public delete(id: number): Observable<Task> {
+    return this.http.delete<Task>(`${this.url}/tasks/${id}`).pipe(
+      tap(() => {
+        this.refreshCollection();
+      })
+    );
   }
 
   public getElementById(id: Number): Observable<Task> {
-    return this.http.get<Task>(`${this.url}/tasks/${id}`)
+    return this.http.get<Task>(`${this.url}/tasks/${id}`);
   }
 }

@@ -11,6 +11,7 @@
             <div class="top-card">
               <h5 class="card-title">{{ task.title }}</h5>
               <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
+              <app-icon-delete (click)="onDelete(task.id)"></app-icon-delete>
             </div>
 
             <p class="card-text">{{ task.content }}</p>
