@@ -27,6 +27,10 @@
   margin-bottom: 10px;
 }
 
+.row {
+  align-items: flex-start;
+}
+
 .top-card {
   display: flex;
   justify-content: space-between;
@@ -42,7 +46,7 @@
 }
 
 .card-title {
-  font-size: 19px;
+  font-size: 18px;
   // text-decoration: underline;
   max-width: 180px;
 }

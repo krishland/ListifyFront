@@ -1,12 +1,18 @@
 button {
-  border: none;
-  height: 38px;
-  width: 38px;
-  border-radius: 8px;
   cursor: pointer;
-  color: var(--app-primary);
-  font-size: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.addButton {
+  border: none;
+  height: 38px;
+  width: 38px;
+  border-radius: 8px;
+  color: var(--app-primary);
+  font-size: 34px;
+}
+
+// .buttonEdit {
+// }
