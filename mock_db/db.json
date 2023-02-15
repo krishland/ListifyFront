@@ -1,58 +1,66 @@
-{
-  "tasks": [
-    {
-      "state": "En cours",
-      "title": "Titre de notre 1ère tâche",
-      "content": "Contenu de notre 1ère tâche",
-      "id": 1
-    },
-    {
-      "state": "En cours",
-      "title": "Titre de notre 2ème tâche",
-      "content": "Contenu de notre 2ème tâche",
-      "id": 2
-    },
-    {
-      "state": "Bloqué",
-      "title": "Ejoiersghois",
-      "content": "Petit contenu",
-      "id": 3
-    },
-    {
-      "state": "En cours",
-      "title": "ehioiz",
-      "content": "Petit contenu2",
-      "id": 4
-    },
-    {
-      "state": "Terminé",
-      "title": "Super Test",
-      "content": "Vrai contenu",
-      "id": 5
-    },
-    {
-      "state": "Bloqué",
-      "title": "fzefaz",
-      "content": "gzegzeg",
-      "id": 6
-    },
-    {
-      "state": "À faire",
-      "title": "gzeg",
-      "content": "gezgzegezgz",
-      "id": 7
-    },
-    {
-      "title": "gezgze",
-      "content": "gzegzegez",
-      "state": "Terminé",
-      "id": 8
-    },
-    {
-      "state": "En cours",
-      "title": "e'tyyyry",
-      "content": "ey'e'yy",
-      "id": 9
-    }
-  ]
-}
+// {
+//   "tasks": [
+//     {
+//       "state": "Bloqué",
+//       "title": "Titre de notre 1ère tâche",
+//       "content": "Contenu de notre 1ère tâche",
+//       "id": 1
+//     },
+//     {
+//       "state": "Terminé",
+//       "title": "Titre de notre 2ème tâche",
+//       "content": "Contenu de notre 2ème tâche",
+//       "id": 2
+//     },
+//     {
+//       "state": "Bloqué",
+//       "title": "Ejoiersghois",
+//       "content": "Petit contenu",
+//       "id": 3
+//     },
+//     {
+//       "state": "À faire",
+//       "title": "ehioiz",
+//       "content": "Petit contenu2",
+//       "id": 4
+//     },
+//     {
+//       "state": "Terminé",
+//       "title": "Super Test",
+//       "content": "Vrai contenu",
+//       "id": 5
+//     },
+//     {
+// <<<<<<< HEAD
+//       "state": "Bloqué",
+// =======
+//       "state": "À faire",
+// >>>>>>> 9cd3b09c154a8025f35c055ceee8806d4edc7fe3
+//       "title": "fzefaz",
+//       "content": "gzegzeg",
+//       "id": 6
+//     },
+//     {
+// <<<<<<< HEAD
+//       "state": "À faire",
+// =======
+//       "state": "Terminé",
+// >>>>>>> 9cd3b09c154a8025f35c055ceee8806d4edc7fe3
+//       "title": "gzeg",
+//       "content": "gezgzegezgz",
+//       "id": 7
+//     },
+//     {
+//       "title": "gezgze",
+//       "content": "gzegzegez",
+//       "state": "Terminé",
+//       "id": 8
+//     },
+//     {
+//       "state": "En cours",
+//       "title": "e'tyyyry",
+//       "content": "ey'e'yy",
+//       "id": 9
+//     }
+//   ]
+// }

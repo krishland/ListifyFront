@@ -19,10 +19,13 @@ button {
 }
 
 .btnEdit::before {
-  content: ''; display: block;
-  position: absolute; inset: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
 
-  height: 64px; width: 64px;
+  height: 64px;
+  width: 64px;
   border-radius: 32px;
 
   z-index: -1;
@@ -30,7 +33,7 @@ button {
   transition: width 200ms;
 }
 
-.btnEdit:is(:hover,:focus)::before {
+.btnEdit:is(:hover, :focus)::before {
   width: 100%;
 }
 

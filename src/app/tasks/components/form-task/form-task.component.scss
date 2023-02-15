@@ -1,0 +1,28 @@
+input {
+  border: none;
+  border-bottom: solid gray 1px;
+  border-radius: 0px;
+  width: 500px;
+}
+textarea {
+  border: none;
+  border-bottom: solid gray 1px;
+  border-radius: 0px;
+  width: 500px;
+}
+
+select {
+  width: 500px;
+}
+
+.form-container {
+  width: 40vw;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.validate {
+  border: var(--app-primary);
+}
