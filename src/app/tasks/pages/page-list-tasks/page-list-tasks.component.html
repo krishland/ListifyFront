@@ -1,37 +1,46 @@
-<div class="container-fluid container-columns main">
-  <div class="row">
-    <div class="col column" *ngFor="let state of states">
-      <h5>{{ state }}</h5>
-      <app-card *ngIf="hasTasks(state)"
-        >Il n'y a pas de tâche dans cette catégorie</app-card
-      >
-      <div *ngFor="let task of collection">
-        <app-card *ngIf="state === task.state" class="cards-container">
-          <div class="card-body">
-            <div class="top-card">
-              <h5 class="card-title">{{ task.title }}</h5>
-              <app-icon-edit (click)="goToEdit(task)"></app-icon-edit>
-              <app-icon-delete (click)="onDelete(task.id)"></app-icon-delete>
-            </div>
+<div class="container-page-list">
+  <div class="container container-columns main">
+    <div class="row">
+      <div class="col column" *ngFor="let state of states">
+        <h5>{{ state }}</h5>
+        <app-card *ngIf="hasTasks(state)"
+          >Il n'y a pas de tâche dans cette catégorie</app-card
+        >
+        <div *ngFor="let task of collection">
+          <app-card *ngIf="state === task.state" class="cards-container">
+            <div class="card-body">
+              <div class="top-card">
+                <h5 class="card-title">{{ task.title }}</h5>
+                <div>
+                  <app-icon-edit
+                    (click)="goToEdit(task)"
+                    class="icon-edit"
+                  ></app-icon-edit>
+                  <app-icon-delete
+                    (click)="onDelete(task.id)"
+                  ></app-icon-delete>
+                </div>
+              </div>
 
-            <p class="card-text">{{ task.content }}</p>
-            <div class="select-state">
-              <app-icon-chevron-down></app-icon-chevron-down>
-              <select
-                (change)="changeState(task, $event)"
-                appState
-                [etat]="task.state"
-              >
-                <option
-                  *ngFor="let state of states"
-                  [selected]="state === task.state"
+              <p class="card-text">{{ task.content }}</p>
+              <div class="select-state">
+                <app-icon-chevron-down></app-icon-chevron-down>
+                <select
+                  (change)="changeState(task, $event)"
+                  appState
+                  [etat]="task.state"
                 >
-                  {{ state }}
-                </option>
-              </select>
+                  <option
+                    *ngFor="let state of states"
+                    [selected]="state === task.state"
+                  >
+                    {{ state }}
+                  </option>
+                </select>
+              </div>
             </div>
-          </div>
-        </app-card>
+          </app-card>
+        </div>
       </div>
     </div>
   </div>
