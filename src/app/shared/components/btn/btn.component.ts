@@ -10,6 +10,7 @@ export class BtnComponent implements OnInit {
   @Input() route!: string;
   @Input() label!: string;
   @Input() disabled!: boolean;
+  @Input() styleBtn!: string;
 
   constructor() { }
 

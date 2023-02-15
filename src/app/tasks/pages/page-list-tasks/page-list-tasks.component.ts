@@ -34,4 +34,8 @@ export class PageListTasksComponent implements OnInit {
   public goToEdit(task: Task) {
     this.router.navigate(['edit', task.id]);
   }
+
+  public hasTasks(state: string) {
+    return this.collection.filter(task => task.state === state).length === 0;
+  }
 }

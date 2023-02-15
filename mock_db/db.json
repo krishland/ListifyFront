@@ -31,15 +31,15 @@
       "id": 5
     },
     {
+      "state": "Bloqué",
       "title": "fzefaz",
       "content": "gzegzeg",
-      "state": "À faire",
       "id": 6
     },
     {
+      "state": "À faire",
       "title": "gzeg",
       "content": "gezgzegezgz",
-      "state": "Bloqué",
       "id": 7
     },
     {
@@ -47,6 +47,12 @@
       "content": "gzegzegez",
       "state": "Terminé",
       "id": 8
+    },
+    {
+      "state": "En cours",
+      "title": "e'tyyyry",
+      "content": "ey'e'yy",
+      "id": 9
     }
   ]
 }

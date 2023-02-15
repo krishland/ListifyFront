@@ -1,12 +1,43 @@
 button {
-  border: none;
-  height: 38px;
-  width: 38px;
-  border-radius: 8px;
   cursor: pointer;
-  color: var(--app-primary);
-  font-size: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btnAdd {
+  height: 38px;
+  width: 38px;
+  border-radius: 8px;
+  color: var(--app-primary);
+  font-size: 34px;
+  border: none;
+}
+
+.btnEdit {
+  height: 64px;
+}
+
+.btnEdit::before {
+  content: ''; display: block;
+  position: absolute; inset: 0;
+
+  height: 64px; width: 64px;
+  border-radius: 32px;
+
+  z-index: -1;
+  background: var(--app-primary);
+  transition: width 200ms;
+}
+
+.btnEdit:is(:hover,:focus)::before {
+  width: 100%;
+}
+
+.btnTest {
+  background: var(--app-primary);
+  width: 85px;
+  height: 35px;
+  border-radius: 20px;
+  color: white;
 }

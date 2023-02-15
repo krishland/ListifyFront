@@ -18,7 +18,10 @@
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: var(--app-darklight);
-  // min-height: 85vh;
+}
+
+.row {
+  align-items: flex-start;
 }
 
 .cards-container {
