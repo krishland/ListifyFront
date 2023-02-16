@@ -17,7 +17,8 @@ export class PageListTasksComponent implements OnInit {
   constructor(private tasksService: TasksService, private router: Router) {
     this.tasksService.collection.subscribe((data) => {
       this.collection = data;
-      console.log(data);
+
+      // console.log(data);
     });
   }
 
@@ -26,6 +27,7 @@ export class PageListTasksComponent implements OnInit {
   public changeState(task: Task, event: Event) {
     const target = event.target as HTMLSelectElement;
     const state = target.value as State;
+
     this.tasksService.changeState(task, state).subscribe((data) => {
       Object.assign(task, data);
     });

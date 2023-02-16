@@ -88,3 +88,18 @@ select {
   -webkit-appearance: none;
   outline: none;
 }
+
+@keyframes taadaa {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate {
+  background-color: #e16971;
+  animation: taadaa 2s infinite;
+}
