@@ -4,7 +4,9 @@
       <div class="col column" *ngFor="let state of states">
         <h5>{{ state }}</h5>
         <app-card *ngIf="hasTasks(state)"
-          >Il n'y a pas de tâche dans cette catégorie</app-card
+          ><p class="nothing">
+            Il n'y a pas de tâche dans cette catégorie
+          </p></app-card
         >
         <div *ngFor="let task of collection">
           <app-card *ngIf="state === task.state" class="cards-container">

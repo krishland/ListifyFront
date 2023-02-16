@@ -11,6 +11,11 @@
 .state-terminé {
   color: var(--app-done);
 }
+.nothing {
+  margin-top: 15px;
+  padding: 20px 30px;
+  color: lightgray;
+}
 
 .column {
   margin: 18px;
@@ -78,6 +83,7 @@
 select {
   border: none;
   appearance: none;
+  cursor: pointer;
   /* for Safari, Chrome, Opera */
   -webkit-appearance: none;
   outline: none;
