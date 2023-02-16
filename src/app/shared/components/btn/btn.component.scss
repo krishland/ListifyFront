@@ -12,6 +12,7 @@ button {
   color: var(--app-primary);
   font-size: 34px;
   border: none;
+  // margin-left: -4px;
 }
 
 .btnEdit {
@@ -34,7 +35,7 @@ button {
   border-radius: 20px;
   color: var(--app-primary);
   border: none;
-  border: solid 2px var(--app-primary);
+  border: solid 2qpx var(--app-primary);
 }
 
 .btnTest:hover {
@@ -46,3 +47,5 @@ button {
   color: white;
   border: none;
 }
+
+// @media(max-width: )

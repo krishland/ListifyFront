@@ -2,6 +2,10 @@
 @import "./stylings/fonts";
 @import "./stylings/layout";
 @import "./stylings/theme";
+@font-face {
+  font-family: "Millimetre";
+  src: url("./assets/fonts/Millimetre-Regular.otf") format("opentype");
+}
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";

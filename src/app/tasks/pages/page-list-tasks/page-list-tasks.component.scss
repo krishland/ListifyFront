@@ -12,16 +12,14 @@
   color: var(--app-done);
 }
 
-.icon-edit {
-  margin-right: 6.5px;
-}
-
 .column {
   margin: 18px;
   padding: 15px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: var(--app-darklight);
+  // min-width: 22.2%;
+  max-width: 299px;
 }
 
 .row {
@@ -34,40 +32,47 @@
   margin-bottom: 10px;
 }
 
-.row {
-  align-items: flex-start;
+.icons-div-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 .top-card {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .card-body {
   padding: 20px;
-  min-height: 200px;
+  // min-height: 200px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  // justify-content: space-between;
+  // background-color: red;
 }
 
 .card-title {
   font-size: 18px;
   // text-decoration: underline;
   max-width: 180px;
+  margin-bottom: 20px;
+  // background-color: yellow;
 }
 
 .card-text {
   font-size: 15px;
   font-style: italic;
-  margin-bottom: 10px;
+  // background-color: aqua;
 }
 
 .select-state {
   // border: red solid 1px;
   display: flex;
   gap: 10px;
+  margin-top: 10%;
 }
 
 select {

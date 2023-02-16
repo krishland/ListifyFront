@@ -2,25 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 80px;
   color: white;
+  font-family: "Millimetre";
+  // min-height: 10vh;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-img {
-  width: 40px;
-  margin-bottom: 8px;
-}
-
-.addButton {
-  border: none;
-  height: 38px;
-  width: 38px;
-  border-radius: 8px;
-  color: var(--app-primary);
-  font-size: 34px;
+.home-link {
+  cursor: pointer;
 }

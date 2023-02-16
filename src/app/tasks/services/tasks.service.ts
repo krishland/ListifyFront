@@ -38,10 +38,18 @@ export class TasksService {
     );
   }
 
+  public patch(obj: Task): Observable<Task> {
+    return this.http.patch<Task>(`${this.url}/tasks/${obj.id}`, obj).pipe(
+      tap(() => {
+        this.refreshCollection();
+      })
+    );
+  }
+
   public changeState(task: Task, state: State): Observable<Task> {
     const obj = new Task(task);
     obj.state = state;
-    return this.update(obj);
+    return this.patch(obj);
   }
 
   public add(obj: Task): Observable<Task> {

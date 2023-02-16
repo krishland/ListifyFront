@@ -431,7 +431,11 @@ export class PageEditTaskComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;app-form-task [obj]&#x3D;&quot;item&quot; *ngIf&#x3D;&quot;item&quot; (submitted)&#x3D;&quot;onEdit($event)&quot;&gt;&lt;/app-form-task&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-form-task
+  [obj]&#x3D;&quot;item&quot;
+  *ngIf&#x3D;&quot;item&quot;
+  (submitted)&#x3D;&quot;onEdit($event)&quot;
+&gt;&lt;/app-form-task&gt;
 </code></pre>
     </div>
 
@@ -467,8 +471,8 @@ export class PageEditTaskComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-form-task [obj]="item" *ngIf="item" (submitted)="onEdit($event)"></app-form-task></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ColumnComponent', 'selector': 'app-column'},{'name': 'FormTaskComponent', 'selector': 'app-form-task'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconChevronDownComponent', 'selector': 'app-icon-chevron-down'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'PageAddTaskComponent', 'selector': 'app-page-add-task'},{'name': 'PageEditTaskComponent', 'selector': 'app-page-edit-task'},{'name': 'PageListTasksComponent', 'selector': 'app-page-list-tasks'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'UiComponent', 'selector': 'app-ui'}];
+        var COMPONENT_TEMPLATE = '<div><app-form-task  [obj]="item"  *ngIf="item"  (submitted)="onEdit($event)"></app-form-task></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnComponent', 'selector': 'app-btn'},{'name': 'CardComponent', 'selector': 'app-card'},{'name': 'ColumnComponent', 'selector': 'app-column'},{'name': 'FormTaskComponent', 'selector': 'app-form-task'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'IconChevronDownComponent', 'selector': 'app-icon-chevron-down'},{'name': 'IconDeleteComponent', 'selector': 'app-icon-delete'},{'name': 'IconEditComponent', 'selector': 'app-icon-edit'},{'name': 'PageAddTaskComponent', 'selector': 'app-page-add-task'},{'name': 'PageEditTaskComponent', 'selector': 'app-page-edit-task'},{'name': 'PageListTasksComponent', 'selector': 'app-page-list-tasks'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'UiComponent', 'selector': 'app-ui'}];
     var DIRECTIVES = [{'name': 'StateDirective', 'selector': '[appState]'}];
     var ACTUAL_COMPONENT = {'name': 'PageEditTaskComponent'};
 </script>
