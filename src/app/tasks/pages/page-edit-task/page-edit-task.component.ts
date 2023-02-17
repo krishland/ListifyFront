@@ -6,25 +6,27 @@ import { TasksService } from '../../services/tasks.service';
 @Component({
   selector: 'app-page-edit-task',
   templateUrl: './page-edit-task.component.html',
-  styleUrls: ['./page-edit-task.component.scss']
+  styleUrls: ['./page-edit-task.component.scss'],
 })
 export class PageEditTaskComponent implements OnInit {
-
   public item!: Task;
+  public label: string = 'Modifier';
 
-  constructor(private tasksService: TasksService, private activatedRoute: ActivatedRoute, private router: Router) {
-    const id = Number(this.activatedRoute.snapshot.paramMap.get("id"));
+  constructor(
+    private tasksService: TasksService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {
+    const id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
 
-    this.tasksService.getElementById(id).subscribe(data =>{
+    this.tasksService.getElementById(id).subscribe((data) => {
       this.item = data;
-    })
-   }
-
-  ngOnInit(): void {
+    });
   }
 
-  public onEdit(obj: Task){
-    this.tasksService.update(obj).subscribe(() =>
-    this.router.navigate([""]));
+  ngOnInit(): void {}
+
+  public onEdit(obj: Task) {
+    this.tasksService.update(obj).subscribe(() => this.router.navigate(['']));
   }
 }

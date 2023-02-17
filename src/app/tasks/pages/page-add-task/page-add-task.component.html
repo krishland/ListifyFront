@@ -1,2 +1,6 @@
 <h1>Ajouter une tâche</h1>
-<app-form-task [obj]="item" (submitted)="onAdd($event)"></app-form-task>
+<app-form-task
+  [obj]="item"
+  (submitted)="onAdd($event)"
+  [label]="label"
+></app-form-task>
