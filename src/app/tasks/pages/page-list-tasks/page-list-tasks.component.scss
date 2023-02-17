@@ -1,105 +1,82 @@
-//classes pour changement des states
-.state-àfaire {
-  color: var(--app-todo);
-}
-.state-encours {
-  color: var(--app-inprogress);
-}
-.state-bloqué {
-  color: var(--app-blocked);
-}
-.state-terminé {
-  color: var(--app-done);
-}
-.nothing {
-  margin-top: 15px;
-  padding: 20px 30px;
-  color: lightgray;
-}
-
-.column {
-  margin: 18px;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background-color: var(--app-darklight);
-  // min-width: 22.2%;
-  max-width: 299px;
-}
-
 .row {
   align-items: flex-start;
-}
+  .column {
+    margin: 18px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: var(--app-darklight);
 
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.icons-div-container {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-
-.top-card {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.card-body {
-  padding: 20px;
-  // min-height: 200px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  display: flex;
-  flex-direction: column;
-  // justify-content: space-between;
-  // background-color: red;
-}
-
-.card-title {
-  font-size: 18px;
-  // text-decoration: underline;
-  max-width: 180px;
-  margin-bottom: 20px;
-  // background-color: yellow;
-}
-
-.card-text {
-  font-size: 15px;
-  font-style: italic;
-  // background-color: aqua;
-}
-
-.select-state {
-  // border: red solid 1px;
-  display: flex;
-  gap: 10px;
-  margin-top: 10%;
-}
-
-select {
-  border: none;
-  appearance: none;
-  cursor: pointer;
-  /* for Safari, Chrome, Opera */
-  -webkit-appearance: none;
-  outline: none;
-}
-
-@keyframes taadaa {
-  0% {
-    opacity: 0;
+    max-width: 299px;
+    .nothing {
+      margin-top: 15px;
+      padding: 20px 30px;
+      color: lightgray;
+    }
+    .cards-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      .card-body {
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        flex-direction: column;
+        .top-card {
+          display: flex;
+          justify-content: space-between;
+          gap: 30px;
+          .card-title {
+            font-size: 18px;
+            // text-decoration: underline;
+            max-width: 180px;
+            margin-bottom: 20px;
+            // background-color: yellow;
+          }
+          .icons-div-container {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+          }
+        }
+        .card-text {
+          font-size: 15px;
+          font-style: italic;
+          // background-color: aqua;
+        }
+        .select-state {
+          // border: red solid 1px;
+          display: flex;
+          gap: 10px;
+          margin-top: 10%;
+          .state-àfaire {
+            color: var(--app-todo);
+          }
+          .state-encours {
+            color: var(--app-inprogress);
+          }
+          .state-bloqué {
+            color: var(--app-blocked);
+          }
+          .state-terminé {
+            color: var(--app-done);
+          }
+          select {
+            border: none;
+            appearance: none;
+            cursor: pointer;
+            /* for Safari, Chrome, Opera */
+            -webkit-appearance: none;
+            outline: none;
+          }
+        }
+      }
+    }
   }
-
-  100% {
-    opacity: 1;
-  }
 }
 
-.animate {
-  background-color: #e16971;
-  animation: taadaa 2s infinite;
+@media (max-width: 430px) {
+  .row {
+    justify-content: center;
+  }
 }

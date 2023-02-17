@@ -5,13 +5,9 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { UiModule } from '../ui/ui.module';
 
-
-
 @NgModule({
   declarations: [HeaderComponent],
-  imports: [
-    CommonModule, RouterModule, SharedModule
-  ],
-  exports: [UiModule, HeaderComponent]
+  imports: [CommonModule, RouterModule, SharedModule],
+  exports: [UiModule, HeaderComponent],
 })
-export class CoreModule { }
+export class CoreModule {}

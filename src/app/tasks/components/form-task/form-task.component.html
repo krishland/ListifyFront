@@ -9,12 +9,20 @@
       <input
         type="text"
         id="title"
-        class="form-control"
+        class="form-control shadow-none"
         placeholder="Titre..."
         formControlName="title"
+        [ngClass]="
+          taskForm.controls['title'].value?.length < 3
+            ? 'border-bottom: inset solid 1px red'
+            : 'border-bottom: inset solid 1px lightgray'
+        "
       />
     </div>
-    <div *ngIf="taskForm.controls['title'].errors?.['minlength']">
+    <div
+      *ngIf="taskForm.controls['title'].errors?.['minlength']"
+      class="alertInput"
+    >
       Doit contenir au moins 3 caractères.
     </div>
 
@@ -22,12 +30,20 @@
       <label for="content"></label>
       <textarea
         id="content"
-        class="form-control"
+        class="form-control shadow-none"
         placeholder="Description..."
         formControlName="content"
+        [ngClass]="
+          taskForm.controls['content'].value?.length < 3
+            ? 'border-bottom: inset solid 1px red'
+            : 'border-bottom: inset solid 1px lightgray'
+        "
       ></textarea>
     </div>
-    <div *ngIf="taskForm.controls['content'].errors?.['minlength']">
+    <div
+      *ngIf="taskForm.controls['content'].errors?.['minlength']"
+      class="alertTextArea"
+    >
       Doit contenir au moins 3 caractères.
     </div>
 

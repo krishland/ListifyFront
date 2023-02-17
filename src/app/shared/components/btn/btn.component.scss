@@ -15,14 +15,6 @@ button {
   // margin-left: -4px;
 }
 
-.btnEdit {
-  height: 64px;
-
-  height: 64px;
-  width: 64px;
-  border-radius: 32px;
-}
-
 // .btnAdd:hover {
 //   background: var(--app-secondary);
 // }
@@ -46,6 +38,16 @@ button {
   border-radius: 20px;
   color: white;
   border: none;
+}
+
+.btnTest:disabled {
+  border: lightgray solid 1px;
+  color: lightgray;
+}
+.btnTest:disabled:hover {
+  border: lightgray solid 1px;
+  color: lightgray;
+  background: white;
 }
 
 // @media(max-width: )
